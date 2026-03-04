@@ -1,5 +1,5 @@
 /* ============================================
-   NÀ CANTINA PE CANTÀ — script.js — v1.6
+   NÀ CANTINA PE CANTÀ — script.js — v1.7
    ============================================ */
 
 function initSite() {
