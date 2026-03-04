@@ -119,8 +119,9 @@
       <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-light italic">"Musica, Cuore e Divertimento"</p>
 
       <div class="flex flex-col items-center gap-4">
-        <!-- Due bottoni principali -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <!-- Mobile: colonna unica con ordine preventivo, instagram, scopri di più -->
+        <!-- Desktop: preventivo + scopri di più sulla stessa riga, instagram sotto -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
           <a href="https://wa.me/393392023495?text=Ciao! Vorrei richiedere un preventivo per la mia festa"
             class="bg-brand-gold text-brand-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all transform hover:scale-105 flex items-center gap-2 shadow-[0_0_20px_rgba(251,191,36,0.5)]">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -130,6 +131,17 @@
             </svg>
             Richiedi Preventivo
           </a>
+          <!-- Instagram: visibile solo su mobile qui, nascosto su desktop -->
+          <a href="https://www.instagram.com/nacantinapecanta" target="_blank"
+            class="sm:hidden px-8 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 flex items-center gap-2"
+            style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); box-shadow: 0 0 20px rgba(220,39,67,0.5);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+            Seguici su Instagram
+          </a>
           <a href="#band"
             class="px-8 py-4 rounded-full font-bold text-lg text-white border-2 border-white/30 hover:bg-white/10 hover:border-white transition-all flex items-center gap-2 backdrop-blur-sm">
             Scopri di più
@@ -138,9 +150,9 @@
             </svg>
           </a>
         </div>
-        <!-- Instagram sotto -->
+        <!-- Instagram: visibile solo su desktop qui, sotto i due bottoni -->
         <a href="https://www.instagram.com/nacantinapecanta" target="_blank"
-          class="px-8 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 flex items-center gap-2"
+          class="hidden sm:flex px-8 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 items-center gap-2"
           style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); box-shadow: 0 0 20px rgba(220,39,67,0.5);">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
