@@ -4,6 +4,9 @@
 
 function initSite() {
 
+  /* ---------- FORZA SCROLL IN CIMA ALL'APERTURA ---------- */
+  window.scrollTo(0, 0);
+
   /* ---------- HEADER: sfondo allo scroll ---------- */
   var header = document.getElementById('main-header');
   if (header) {
@@ -49,6 +52,11 @@ function initSite() {
       });
     }
   }
+}
+
+/* Blocca il ripristino automatico dello scroll del browser mobile */
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
 }
 
 /* Funziona sia in locale che online */
