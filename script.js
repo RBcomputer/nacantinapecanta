@@ -1,5 +1,5 @@
 /* ============================================
-   NÀ CANTINA PE CANTÀ — script.js — v1.5
+   NÀ CANTINA PE CANTÀ — script.js — v1.6
    ============================================ */
 
 function initSite() {
@@ -65,3 +65,35 @@ if (document.readyState === 'loading') {
 } else {
   initSite();
 }
+
+/* ---------- COOKIE BANNER ---------- */
+(function () {
+  var banner  = document.getElementById('cookie-banner');
+  var accept  = document.getElementById('cookie-accept');
+  var decline = document.getElementById('cookie-decline');
+
+  if (!banner) return;
+
+  /* Mostra solo se non ha ancora scelto */
+  if (!localStorage.getItem('cookieChoice')) {
+    banner.style.display = 'block';
+  }
+
+  if (accept) {
+    accept.addEventListener('click', function () {
+      localStorage.setItem('cookieChoice', 'accepted');
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 0.4s';
+      setTimeout(function() { banner.style.display = 'none'; }, 400);
+    });
+  }
+
+  if (decline) {
+    decline.addEventListener('click', function () {
+      localStorage.setItem('cookieChoice', 'declined');
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 0.4s';
+      setTimeout(function() { banner.style.display = 'none'; }, 400);
+    });
+  }
+})();
