@@ -1,0 +1,45 @@
+/* ============================================
+   NÀ CANTINA PE CANTÀ — styles.css
+   ============================================ */
+
+/* ---------- SCROLL ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #1c1917; }
+::-webkit-scrollbar-thumb { background: #fbbf24; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #d97706; }
+
+/* ---------- FOCUS ---------- */
+:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* ---------- ANIMAZIONI ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* ============================================
+   HERO MOBILE (smartphone fino a 768px)
+   ============================================
+   min-height → altezza hero: riduci per vedere più larghezza foto
+   object-position → aumenta % per far scendere la foto
+   ============================================ */
+@media (max-width: 768px) {
+  #home {
+    min-height: 45vh !important;
+  }
+  #hero-bg-img {
+    object-position: center 30% !important; /* ← CAMBIA QUESTO per mobile */
+  }
+}
